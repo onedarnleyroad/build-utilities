@@ -1,19 +1,19 @@
 {
-  "name": "resize-end",
+  "name": "build-utilities",
   "version": "1.0.0",
-  "description": "resize end for jquery",
-  "main": "resizeEnd.js",
+  "description": "1DR Utilities and so on",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onedarnleyroad/resizeEnd.git"
+    "url": "git+https://github.com/onedarnleyroad/build-utilities.git"
   },
-  "author": "",
+  "author": "One Darnley Road",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/onedarnleyroad/resizeEnd/issues"
+    "url": "https://github.com/onedarnleyroad/build-utilities/issues"
   },
-  "homepage": "https://github.com/onedarnleyroad/resizeEnd#readme"
+  "homepage": "https://github.com/onedarnleyroad/build-utilities#readme"
 }
