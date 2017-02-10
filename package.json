@@ -1,0 +1,19 @@
+{
+  "name": "resize-end",
+  "version": "1.0.0",
+  "description": "resize end for jquery",
+  "main": "resizeEnd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedarnleyroad/resizeEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onedarnleyroad/resizeEnd/issues"
+  },
+  "homepage": "https://github.com/onedarnleyroad/resizeEnd#readme"
+}
