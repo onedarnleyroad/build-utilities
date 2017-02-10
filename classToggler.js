@@ -7,6 +7,8 @@
         so we can create a wrapper here. Most browsers will happily use
         vanilla JS classList and querySelectorAll - but for those that don't, we can just defer to when
         jQuery loads for simplicity.
+
+        Comment to test updating
     */
 
     /*----------  USAGE  ----------*/
