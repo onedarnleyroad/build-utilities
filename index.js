@@ -9,7 +9,7 @@
 
 var _1dr = function( keyword ) {
     return './node_modules/build-utilities/'+keyword+'.js';
-}
+};
 
 // @TODO = some kind of function that outputs instructions so we can remember what
 // the hell each of these does.
@@ -42,7 +42,8 @@ module.exports = {
             } else {
                 console.log( "Couldn't Find " + id + " in the file list store!" );
             }
-        }
+
+        });
 
         return fileList.concat( add );
 
