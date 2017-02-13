@@ -15,21 +15,23 @@ var _1dr = function( keyword ) {
 // the hell each of these does.
 // and obviously to increase this further
 
+var _locations = {
+
+    // ours
+        'resizeEnd': _1dr('resizeEnd'),
+        'oneModals': _1dr('oneModals'),
+        'classToggler': _1dr('classToggler'),
+
+
+    // vendor
+        'jquery' : './node_modules/jquery/dist/jquery.min.js',
+        'scrollMonitor' : './node_modules/scrollmonitor/scrollMonitor.js',
+
+};
+
 module.exports = {
 
-    locations: {
-
-        // ours
-            'resizeEnd': _1dr('resizeEnd'),
-            'oneModals': _1dr('oneModals'),
-            'classToggler': _1dr('classToggler'),
-
-
-        // vendor
-            'jquery' : './node_modules/jquery/dist/jquery.min.js',
-            'scrollMonitor' : './node_modules/scrollmonitor/scrollMonitor.js',
-
-    },
+    locations: _locations,
 
     load: function( ids, add ) {
 
@@ -37,8 +39,8 @@ module.exports = {
 
         ids.forEach( ( id ) => {
 
-            if ( this.locations.hasOwnProperty( id ) ) {
-                fileList.push( this.locations[id] )
+            if ( _locations.hasOwnProperty( id ) ) {
+                fileList.push( _locations.locations[id] )
             } else {
                 console.log( "Couldn't Find " + id + " in the file list store!" );
             }
