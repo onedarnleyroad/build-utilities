@@ -46,7 +46,7 @@ module.exports = {
             }
 
         });
-
+        add = add || [];
         return fileList.concat( add );
 
     }
