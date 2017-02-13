@@ -40,7 +40,7 @@ module.exports = {
         ids.forEach( ( id ) => {
 
             if ( _locations.hasOwnProperty( id ) ) {
-                fileList.push( _locations.locations[id] )
+                fileList.push( _locations[id] )
             } else {
                 console.log( "Couldn't Find " + id + " in the file list store!" );
             }
