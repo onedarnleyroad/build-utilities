@@ -8,7 +8,7 @@
 // configurable
 
 var _1dr = function( keyword ) {
-    return './node_modules/build-utilities/'+keyword+'.js';
+    return './node_modules/build-utilities/libs/'+keyword+'.js';
 };
 
 // @TODO = some kind of function that outputs instructions so we can remember what
