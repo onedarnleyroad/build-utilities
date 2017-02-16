@@ -21,6 +21,7 @@ var _locations = {
         'resizeEnd': _1dr('resizeEnd'),
         'oneModals': _1dr('oneModals'),
         'classToggler': _1dr('classToggler'),
+        'exposure': _1dr('jquery.exposure'),
 
 
     // vendor
