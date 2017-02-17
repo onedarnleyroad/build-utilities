@@ -21,9 +21,11 @@ var _locations = {
         'resizeEnd': _1dr('resizeEnd'),
         'oneModals': _1dr('oneModals'),
         'classToggler': _1dr('classToggler'),
+        'class.photoswipe': _1dr('class.photoswipe'),
         'exposure': _1dr('jquery.exposure'),
 
     // vendor
+        'photoswipe': './node_modules/photoswipe/dist/photoswipe.min.js',
         'jquery' : './node_modules/jquery/dist/jquery.min.js',
         'picturefill': './node_modules/picturefill/dist/picturefill.min.js',
         'scrollMonitor' : './node_modules/scrollmonitor/scrollMonitor.js',
