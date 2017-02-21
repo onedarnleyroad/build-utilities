@@ -43,36 +43,35 @@ module.exports = function( gulp, $ ) {
 
     };
 
-    return {
+    return function( getScriptFiles, scriptsDest ) {
+
+        return function() {
 
 
-        task: function( srcFile, scriptsDest ) {
+            getScriptFiles.forEach(function( scripts ) {
 
-            return function() {
-                var getScriptFiles = requireNew( srcFile );
+            	console.log( scripts );
 
-                getScriptFiles( scriptsDest ).forEach(function( scripts ) {
+                // set a default destination
+                var thisDest = scriptsDest;
 
-                    // set a default destination
-                    var thisDest = scriptsDest;
+                // ...and only update it if it was actually set.
+                if (scripts.hasOwnProperty( 'dest') && scripts.dest) {
+                    thisDest = scripts.dest;
+                }
 
-                    // ...and only update it if it was actually set.
-                    if (scripts.hasOwnProperty( 'dest') && scripts.dest) {
-                        thisDest = scripts.dest;
-                    }
-
-                    // avoid throwing errrows....
-                    if (scripts.hasOwnProperty('target') && scripts.target) {
-                        // concat
-                        joinscripts( scripts.files, thisDest, scripts.target );
-                    } else {
-                        // do not concatenate
-                        movescripts( scripts.files, thisDest );
-                    }
-                });
-            }
-
+                // avoid throwing errrows....
+                if (scripts.hasOwnProperty('target') && scripts.target) {
+                    // concat
+                    joinscripts( scripts.files, thisDest, scripts.target );
+                } else {
+                    // do not concatenate
+                    movescripts( scripts.files, thisDest );
+                }
+            });
         }
+
+
 
     };
 

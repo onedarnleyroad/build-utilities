@@ -32,26 +32,69 @@ var _locations = {
 
 };
 
-module.exports = {
+var _load = function( ids, add ) {
 
-    locations: _locations,
+    var fileList = [];
 
-    load: function( ids, add ) {
+    ids.forEach( ( id ) => {
 
-        var fileList = [];
+        if ( _locations.hasOwnProperty( id ) ) {
+            fileList.push( _locations[id] )
+        } else {
+            console.log( "Couldn't Find " + id + " in the file list store!" );
+        }
 
-        ids.forEach( ( id ) => {
+    });
+    add = add || [];
+    return fileList.concat( add );
 
-            if ( _locations.hasOwnProperty( id ) ) {
-                fileList.push( _locations[id] )
-            } else {
-                console.log( "Couldn't Find " + id + " in the file list store!" );
-            }
+}
+
+const   gulpLoadPlugins = require('gulp-load-plugins'),
+        $ = gulpLoadPlugins();
+
+module.exports = function( gulp ) {
+
+
+
+    // load our script task,
+    // we'll make this a bit more extended
+    // when we know more
+
+    var _gulpScripts = require('./gulp-tasks/gulp-scripts')( gulp, $ );
+
+    var gulpScripts = function( config, defaultDest ) {
+
+
+
+    	var files = [];
+
+
+        config.forEach(function( group ) {
+        	var list = _load( group.packageFiles, group.projectScripts );
+
+        	group.files = list;
+        	files.push( group );
 
         });
-        add = add || [];
-        return fileList.concat( add );
+
+        return _gulpScripts( files, defaultDest );
+
+    };
+
+    return {
+
+
+
+        locations: _locations,
+
+
+
+        load: _load,
+
+        tasks: {
+            scripts: gulpScripts
+        }
 
     }
-
 };

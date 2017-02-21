@@ -20,9 +20,20 @@ The steps go like this:
 First clone the repository of this module (somewhere other than your main project), and
 cd into it. Then set it up as an npm to be linked elsewhere.
 
+
+1. Clone the repo and move into that folder
 ```
-$ git clone https://github.com/onedarnleyroad/build-utilities
-$ cd build-utilities
+$ git clone https://github.com/onedarnleyroad/build-utilities && cd build-utilities
+```
+
+2. Install dependencies. This is important as the tools rely on various gulp plugins and so on,
+but because this will be symlinked, the project will not be able to find them.
+```
+$ npm install
+```
+
+Finally link the package:
+```
 $ npm link
 ```
 
