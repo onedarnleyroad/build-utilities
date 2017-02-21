@@ -1,6 +1,6 @@
 {
-  "name": "build-utilities",
-  "version": "1.0.0",
+  "name": "1dr-build-utilities",
+  "version": "1.0.1",
   "description": "1DR Utilities and so on",
   "main": "index.js",
   "scripts": {
