@@ -26,6 +26,7 @@ var _locations = {
 
     // vendor
         'photoswipe': './node_modules/photoswipe/dist/photoswipe.min.js',
+        'flickity': './node_modules/flickity/dist/flickity.pkgd.min.js',
         'jquery' : './node_modules/jquery/dist/jquery.min.js',
         'picturefill': './node_modules/picturefill/dist/picturefill.min.js',
         'scrollMonitor' : './node_modules/scrollmonitor/scrollMonitor.js',
