@@ -226,6 +226,9 @@ $(document).ready(function() {
                 }, 150);
             });
             var children = $els.content.children();
+            if (children.length) {
+            	children.trigger('MODAL.close');
+            }
             // have to namespace else face weird consequences
             MODAL.emit("MODAL.close", children);
             return children;
