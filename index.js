@@ -25,8 +25,8 @@ var _locations = {
         'exposure': _1dr('jquery.exposure'),
 
     // ourse, but a module
-    	'swig': './node_modules/swig-templating/node_modules/twig/twig.js',
-    	'swig-templating': './node_modules/swig-templating/index.js',
+    	'twig': './node_modules/twig-templating/node_modules/twig/twig.js',
+    	'twig-templating': './node_modules/twig-templating/index.js',
 
     // vendor
         'photoswipe': './node_modules/photoswipe/dist/photoswipe.min.js',
