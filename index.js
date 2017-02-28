@@ -24,6 +24,10 @@ var _locations = {
         'class.photoswipe': _1dr('class.photoswipe'),
         'exposure': _1dr('jquery.exposure'),
 
+    // ourse, but a module
+    	'swig': './node_modules/swig-templating/node_modules/twig/twig.js',
+    	'swig-templating': './node_modules/swig-templating/index.js',
+
     // vendor
         'photoswipe': './node_modules/photoswipe/dist/photoswipe.min.js',
         'flickity': './node_modules/flickity/dist/flickity.pkgd.min.js',
